@@ -8,12 +8,12 @@ interface Car {
 }
 
 @Component({
-  selector: 'person',
-  templateUrl: './person.component.html',
-  styleUrls: ['./person.component.css']
+  selector: 'user',
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css']
 })
 
-export class PersonComponent implements OnInit {
+export class UserComponent implements OnInit {
 
   // Fields
   firstName = 'Andrea';
