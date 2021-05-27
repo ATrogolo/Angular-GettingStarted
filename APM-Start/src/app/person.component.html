@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <div>
+    <h3>Author details</h3>
+
+    <div>Firstname: {{firstName}}</div>
+    <div>Lastname: {{lastName}}</div>
+    <div>Age: {{getAge()}}</div>
+
+    <div *ngIf="showCity">{{City}}</div>
+
+    <hr />
+    <div *ngIf="cars.length > 0">
+
+      <h3>Cars:</h3>
+      <button class="btn btn-primary" (click)="toggleCarsButtons()">{{ showCarsLogo ? "Hide" : "Show"}} cars logo</button>
+      <div *ngFor="let car of cars"
+           class="car-container">
+        <img *ngIf="showCarsLogo"
+             [src]="car.logoUrl"
+             width="70px" />
+        <span>{{ car.year }}</span> -
+        <span>{{ car.manufacturer }}</span> -
+        <span>{{ car.name }}</span>
+      </div>
+    </div>
+
+  </div>
+</div>
